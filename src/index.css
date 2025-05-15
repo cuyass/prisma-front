@@ -1,4 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+@layer base {
+    :root[data-theme='prisma-light'] {
+        --color-base-100: oklch(98% 0 0);
+        --color-base-200: oklch(97% 0 0);
+        --color-base-300: oklch(92% 0 0);
+        --color-base-content: oklch(20% 0 0);
+        --color-primary: oklch(80% 0.114 19.571);
+        --color-primary-content: oklch(29% 0.066 243.157);
+        --color-secondary: oklch(83% 0.128 66.29);
+        --color-secondary-content: oklch(30% 0.056 229.695);
+        --color-accent: oklch(81% 0.111 293.571);
+        --color-accent-content: oklch(28% 0.091 267.935);
+        --color-neutral: oklch(71% 0.203 305.504);
+        --color-neutral-content: oklch(0% 0 0);
+        --color-info: oklch(68% 0.169 237.323);
+        --color-info-content: oklch(97% 0.013 236.62);
+        --color-success: oklch(72% 0.219 149.579);
+        --color-success-content: oklch(98% 0.018 155.826);
+        --color-warning: oklch(87% 0.169 91.605);
+        --color-warning-content: oklch(21% 0.006 56.043);
+        --color-error: oklch(63% 0.237 25.331);
+        --color-error-content: oklch(97% 0.013 17.38);
+
+        --radius-selector: 1rem;
+        --radius-field: 1rem;
+        --radius-box: 1rem;
+        --size-selector: 0.25rem;
+        --size-field: 0.25rem;
+        --border: 1px;
+        --depth: 0;
+        --noise: 0;
+        --font-sans: "Roboto", sans-serif;
+    }
+}
+
+/* @layer base {
+
+    h1,
+    h2,
+    h3 {
+        @apply font-title;
+    }
+
+    body {
+        @apply font-body bg-base-100 text-base-content;
+    }
+} */
