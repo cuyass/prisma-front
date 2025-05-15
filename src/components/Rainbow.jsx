@@ -2,7 +2,7 @@ import React from "react";
 
 const RainbowBar = () => {
     return (
-        <div className="h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-purple-600"></div>
+        <div className="h-1 bg-gradient-to-r from-[color:var(--color-error)] via-[color:var(--color-warning)] to-[color:var(--color-accent)]"></div>
     );
 };
 export default RainbowBar;
