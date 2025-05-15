@@ -1,40 +1,43 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Card from "../Card";
 
 const FeaturedContent = () => {
+    const navigate = useNavigate();
+
     const resources = [
       {
         icon: "🔐",
         title: "Fonaments de Privacitat",
         description: "Aprèn els conceptes bàsics per protegir la teva informació personal en línia.",
         actionText: "Començar",
-        route: "/pages/learn/privacy-basics"
+        path: "/pages/learn/privacy-basics"
       },
       {
         icon: "📱",
         title: "Seguretat en Aplicacions de Cites",
         description: "Guia per utilitzar aplicacions de cites de manera segura i protegir la teva identitat.",
         actionText: "Llegir Guia",
-        route: "/pages/learn/dating-app-safety"
+        path: "/pages/learn/dating-app-safety"
       },
       {
         icon: "👥",
         title: "Activisme Digital Segur",
         description: "Estratègies per activistes LGBTQ+ per mantenir-se segurs mentre advocen pel canvi.",
         actionText: "Explorar",
-        route: "/pages/learn/digital-activism"
+        path: "/pages/learn/digital-activism"
       },
       {
         icon: "🗝️",
         title: "Gestió de Contrasenyes",
         description: "Crea i gestiona contrasenyes fortes per protegir els teus comptes en línia.",
         actionText: "Aprendre",
-        route: "/pages/learn/password-management"
+        path: "/pages/learn/password-management"
       }
     ];
   
-    const handleCardClick = (route) => {
-      Navigate(route);
+    const handleCardClick = (path) => {
+      navigate(path);
     };
   
     return (
@@ -52,7 +55,7 @@ const FeaturedContent = () => {
               title={resource.title}
               description={resource.description}
               actionText={resource.actionText}
-              onClick={() => handleCardClick(resource.route)}
+              onClick={() => handleCardClick(resource.path)}
             />
           ))}
         </div>
