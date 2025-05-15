@@ -9,6 +9,7 @@ const HamburgerButton = ({ onClick, tabIndex = 0, ariaLabel = 'Menu' }) => {
       width: '3rem',
       height: '3rem',
       padding: '0.25rem',
+      marginRight: '1rem',
       backgroundColor: 'transparent',
       border: 'none',
       cursor: 'pointer',
@@ -16,15 +17,15 @@ const HamburgerButton = ({ onClick, tabIndex = 0, ariaLabel = 'Menu' }) => {
       transition: 'background-color 0.2s ease',
     },
     svg: {
-      width: '1.25rem',
-      height: '1.25rem',
+      width: '2rem',
+      height: '2rem',
       stroke: 'var(--color-base-content)',
       strokeLinecap: 'square',
       strokeLinejoin: 'round',
       strokeWidth: 2,
     },
     buttonHover: {
-      backgroundColor: 'var(--color-base-200)',
+      backgroundColor: 'var(--color-accent)',
     }
   };
 
