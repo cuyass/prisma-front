@@ -5,8 +5,8 @@ const HeroSection = () => {
     <div className="hero bg-base-200 h-full">
       <div className="hero-content text-center">
         <div className="max-w-md">
-          <h1 className="text-5xl font-bold font-[Roboto]">
-            Benvingudis a PRISMA Defense Hub
+          <h1 className="text-5xl p-3 font-bold font-[Roboto]">
+            <span>Benvingudis a</span><br /><span className="">PRISMA</span><br /><span>Defense Hub</span>  
           </h1>
           <h2 className="py-6 text-xl font-[Roboto]">
             Seguretat digital per la comunitat: perquè les identitats són per celebrar-les, no per filtrar-les.
