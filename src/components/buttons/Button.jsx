@@ -4,6 +4,7 @@ const Button = ({
   children,
   onClick,
   disabled = false,
+  loading = false,
   variant = 'primary',
   ...props
 }) => {
@@ -23,17 +24,17 @@ const Button = ({
   return (
     <button
       onClick={onClick}
-      disabled={disabled}
+      disabled={disabled || loading}
       {...props}
       style={{
-        backgroundColor: disabled ? 'gray' : bgColor,
-        color: disabled ? '#ccc' : textColor,
+        backgroundColor: disabled || loading ? 'gray' : bgColor,
+        color: disabled || loading ? '#ccc' : textColor,
         borderRadius: 'var(--radius-field)',
         padding: '0.5rem 1.25rem',
         border: 'none',
         fontWeight: '600',
         fontFamily: 'var(--font-sans)',
-        cursor: disabled ? 'not-allowed' : 'pointer',
+        cursor: disabled || loading ? 'not-allowed' : 'pointer',
         transition: 'background-color 0.3s ease',
       }}
       onMouseEnter={e => {
@@ -43,7 +44,7 @@ const Button = ({
         if (!disabled) e.currentTarget.style.filter = 'brightness(1)';
       }}
     >
-      {children}
+      {loading ? 'Guardant...' : children}
     </button>
   );
 };
