@@ -40,7 +40,7 @@ const AdminDashboard = () => {
       } finally {
         setIsDeleting(false);
       }
-    }
+    } 
   };
 
   return (
