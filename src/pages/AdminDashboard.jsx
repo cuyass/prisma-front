@@ -18,8 +18,9 @@ function AdminDashboard() {
     useEffect(() => {
 
         axios.get('http://localhost:8080/api/v1/lessons')
-            .then(res => {
-                setLessons(res.data);
+            .then(({ data }) => {
+                console.log("Lliçons carregades:", data);
+                setLessons(data.data);
             })
             .catch(err => {
                 console.error('Error al cargar les lliçons: ', err);
@@ -49,11 +50,11 @@ function AdminDashboard() {
     const handleEdit = (lessonId) => {
         navigate(`/edit/${lessonId}`);
     };
-
+    console.log("Lecciones:", lessons);
     return (
         <div className="min-h-screen bg-gray-100 p-6">
             <div className="mb-6">
-                <h1 className="text-3xl font-semibold text-gray-800">Panell d'administrador</h1>
+                <h1 className="font-[Righteous]">Panell d'administrador</h1>
             </div>
 
             {alertVisible && (
