@@ -3,12 +3,12 @@ import React from "react";
 const Card = ({ image, icon, title, description, actionText = "Llegir més", onClick }) => {
     return (
         <div className="card bg-[color:var(--color-base-100)] w-full shadow-sm border border-[color:var(--color-base-300)] rounded-[var(--radius-box)]">
-            <figure className="px-10 pt-10 bg-[color:var(--color-base-200)]">
+            <figure className="px-1 pt-5 bg-[color:var(--color-base-200)]">
                 {image ? (
                     <img
                         src={image}
                         alt={title}
-                        className="rounded-xl w-16 h-16 object-cover mb-4"
+                        className="rounded-xl w-60 h-35 object-cover mb-4"
                     />
                 ) : icon ? (
                     <div className="text-6xl mb-4 text-[color:var(--color-accent)]">{icon}</div>
