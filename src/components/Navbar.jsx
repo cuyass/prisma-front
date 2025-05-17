@@ -13,13 +13,13 @@ const Navbar = () => {
             <a className="font-[Righteous]">PRISMA</a>
         </div>
         <div className="navbar-end">
-        <div className="dropdown">
+        <div className="dropdown dropdown-end">
             <HamburgerButton />
             <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                <li className="font-[Roboto]"><Link to="/">Inici</Link></li>
-                <li className="font-[Roboto]"><Link to="/admindashboard">Panell d'administrador</Link></li>
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-40 p-2 shadow">
+                <li className="font-body"><Link to="/" className="block w-full text-right">Inici</Link></li>
+                <li className="font-body"><Link to="/admindashboard"className="block w-full text-right">Panell d'administrador</Link></li>
                 {/* <li><Link to="/learn">Aprendre</Link></li>
                 <li className="font-[Roboto]"><Link to="/FAQ">FAQ</Link></li>
                 <li className="font-[Roboto]"><Link to="/directory">Directori</Link></li>
