@@ -7,7 +7,7 @@ const LessonTable = ({ lessons, onDelete, isDeleting }) => {
     const navigate = useNavigate();
 
     if (!Array.isArray(lessons) || lessons.length === 0) {
-        return <p>No hi ha res per mostrar</p>;
+        return <p className="font-[Roboto]">Això està més buit que la VIP room de la Kandy Muse</p>;
       }
   return (
     <div className="overflow-x-auto bg-white rounded-lg shadow-md">
@@ -15,10 +15,10 @@ const LessonTable = ({ lessons, onDelete, isDeleting }) => {
         <thead>
           <tr>
             <th></th>
-            <th>Títol</th>
-            <th>Data de creació</th>
-            <th>Última actualizació</th>
-            <th>Accions</th>
+            <th className="font-[Roboto]">Títol</th>
+            <th className="font-[Roboto]">Data de creació</th>
+            <th className="font-[Roboto]">Última actualizació</th>
+            <th className="font-[Roboto]">Accions</th>
           </tr>
         </thead>
         <tbody>
