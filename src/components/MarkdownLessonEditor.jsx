@@ -91,7 +91,7 @@ const MarkdownLessonEditor = ({ lessonId }) => {
             <div className="mt-4 flex gap-4">
                 <Button
                     onClick={handleSave}
-                    variant="primary"
+                    variant="accent"
                     loading={isSaving}
                     disabled={!hasChanges}
                 >
@@ -100,7 +100,7 @@ const MarkdownLessonEditor = ({ lessonId }) => {
 
                 <Button
                     onClick={handleCancel}
-                    variant="secondary"
+                    variant="error"
                     disabled={!hasChanges || isSaving}
                 >
                     Cancel·lar
