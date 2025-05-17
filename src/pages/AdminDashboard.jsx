@@ -1,67 +1,76 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import MarkdownLessonEditor from "./MarkdownLessonEditor";
+
 import Alert from "../components/Alert";
-import Button from "../components/buttons/Button";
+
 import { useNavigate } from "react-router";
 import LessonTable from "../components/Table";
 
-const AdminDashboard = () => {
+function AdminDashboard() {
     const [lessons, setLessons] = useState([]);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [alertVisible, setAlertVisible] = useState(false);
-  const [alertMessage, setAlertMessage] = useState('');
-  const [alertVariant, setAlertVariant] = useState('neutral');
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [alertVisible, setAlertVisible] = useState(false);
+    const [alertMessage, setAlertMessage] = useState('');
+    const [alertVariant, setAlertVariant] = useState('neutral');
 
-  useEffect(() => {
-   
-    axios.get('http://localhost:8080/api/v1/lessons')
-      .then(res => {
-        setLessons(res.data);
-      })
-      .catch(err => {
-        console.error('Error al cargar les lliçons: ', err);
-      });
-  }, []);
+    const navigate = useNavigate();
 
-  const handleDelete = async (lessonId) => {
-    if (window.confirm('Estàs seguri de voler eliminar aquesta lliçó?')) {
-      setIsDeleting(true);
+    useEffect(() => {
 
-      try {
-        await axios.delete(`http://localhost:8080/api/v1/lessons/${lessonId}`);
-        setAlertMessage('Lliçó eliminada correctament');
-        setAlertVariant('success');
-        setAlertVisible(true);
-        setLessons(lessons.filter(lesson => lesson.id !== lessonId));
-        setTimeout(() => setAlertVisible(false), 3000); 
-      } catch (err) {
-        setAlertMessage('Hi ha hagut un error eliminant la lliçó');
-        setAlertVariant('error');
-        setAlertVisible(true);
-      } finally {
-        setIsDeleting(false);
-      }
-    } 
-  };
+        axios.get('http://localhost:8080/api/v1/lessons')
+            .then(res => {
+                setLessons(res.data);
+            })
+            .catch(err => {
+                console.error('Error al cargar les lliçons: ', err);
+            });
+    }, []);
 
-  return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <div className="mb-6">
-        <h1 className="text-3xl font-semibold text-gray-800">Panell d'administrador</h1>
-      </div>
+    const handleDelete = async (lessonId) => {
+        if (window.confirm('Estàs seguri de voler eliminar aquesta lliçó?')) {
+            setIsDeleting(true);
 
-      {alertVisible && (
-        <Alert variant={alertVariant} duration={3} closable>
-          {alertMessage}
-        </Alert>
-      )}
+            try {
+                await axios.delete(`http://localhost:8080/api/v1/lessons/${lessonId}`);
+                setAlertMessage('Lliçó eliminada correctament');
+                setAlertVariant('success');
+                setAlertVisible(true);
+                setLessons(lessons.filter(lesson => lesson.id !== lessonId));
+                setTimeout(() => setAlertVisible(false), 3000);
+            } catch (err) {
+                setAlertMessage('Hi ha hagut un error eliminant la lliçó');
+                setAlertVariant('error');
+                setAlertVisible(true);
+            } finally {
+                setIsDeleting(false);
+            }
+        }
+    };
+    const handleEdit = (lessonId) => {
+        navigate(`/edit/${lessonId}`);
+    };
 
-      <div className="overflow-x-auto bg-white rounded-lg shadow-md">
-      <LessonTable />
-      </div>
-    </div>
-  );
+    return (
+        <div className="min-h-screen bg-gray-100 p-6">
+            <div className="mb-6">
+                <h1 className="text-3xl font-semibold text-gray-800">Panell d'administrador</h1>
+            </div>
+
+            {alertVisible && (
+                <Alert variant={alertVariant} duration={3} closable>
+                    {alertMessage}
+                </Alert>
+            )}
+
+            <div className="overflow-x-auto bg-white rounded-lg shadow-md">
+                <LessonTable
+                    lessons={lessons}
+                    onDelete={handleDelete}
+                    onEdit={handleEdit}
+                    isDeleting={isDeleting} />
+            </div>
+        </div>
+    );
 };
 
 export default AdminDashboard;
