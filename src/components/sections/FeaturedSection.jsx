@@ -1,38 +1,42 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "../Card";
+import Privacy from "../../assets/images/privacy-image.jpg";
+import Apps from "../../assets/images/apps-image.jpg";
+import Activism from "../../assets/images/activism-image.jpg";
+import Password from "../../assets/images/password-image.jpg";
 
 const FeaturedContent = () => {
     const navigate = useNavigate();
 
     const resources = [
       {
-        icon: "🔐",
+        image: Privacy,
         title: "Fonaments de Privacitat",
         description: "Aprèn els conceptes bàsics per protegir la teva informació personal en línia.",
         actionText: "Començar",
-        path: "/pages/learn/privacy-basics"
+        path: "/learn"
       },
       {
-        icon: "📱",
+        image: Apps,
         title: "Seguretat en Aplicacions de Cites",
         description: "Guia per utilitzar aplicacions de cites de manera segura i protegir la teva identitat.",
         actionText: "Llegir Guia",
-        path: "/pages/learn/dating-app-safety"
+        path: "/learn"
       },
       {
-        icon: "👥",
+        image: Activism,
         title: "Activisme Digital Segur",
         description: "Estratègies per activistes LGBTQ+ per mantenir-se segurs mentre advocen pel canvi.",
         actionText: "Explorar",
-        path: "/pages/learn/digital-activism"
+        path: "/learn"
       },
       {
-        icon: "🗝️",
+        image: Password,
         title: "Gestió de Contrasenyes",
         description: "Crea i gestiona contrasenyes fortes per protegir els teus comptes en línia.",
         actionText: "Aprendre",
-        path: "/pages/learn/password-management"
+        path: "/learn"
       }
     ];
   
