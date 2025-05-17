@@ -20,30 +20,28 @@ const Alert = ({
         }
     }, [duration]);
 
-    const baseStyles = 'alert';
-
-    const variants = {
 
 
-        neutral: ['var(--color-neutral)', 'var(--color-neutral-content)'],
-        success: ['var(--color-success)', 'var(--color-success-content)'],
-        warning: ['var(--color-warning)', 'var(--color-warning-content)'],
-        error: ['var(--color-error)', 'var(--color-error-content)'],
+    const variantClasses = {
+        neutral: 'alert-info',
+        success: 'alert-success',
+        warning: 'alert-warning',
+        error: 'alert-error',
     };
 
-    const variantStyle = variants[variant] || '';
+    const alertClass = variantClasses[variant] || 'alert-info';
 
     if (!visible) return null;
 
     return (
-        <div role="alert" className={`relative ${baseStyles} ${variantStyle}`} {...props}>
+        <div role="alert" className={`alert ${alertClass} shadow-lg relative`} {...props}>
             <span>{children}</span>
             {closable && (
                 <Button
                     onClick={() => setVisible(false)}
                     variant="neutral"
                     className="btn-sm btn-circle btn-ghost absolute top-2 right-2"
-                    aria-label="Close alert"
+                    aria-label="Tancar alerta"
                 >
                     ✕
                 </Button>
