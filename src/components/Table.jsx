@@ -1,7 +1,14 @@
 import React from 'react';
 import Button from './buttons/Button';
+import { useNavigate } from 'react-router-dom';
 
-const LessonTable = ({ lessons, onEdit, onDelete, isDeleting }) => {
+const LessonTable = ({ lessons, onDelete, isDeleting }) => {
+
+    const navigate = useNavigate();
+
+    if (!Array.isArray(lessons) || lessons.length === 0) {
+        return <p>No hi ha res per mostrar</p>;
+      }
   return (
     <div className="overflow-x-auto bg-white rounded-lg shadow-md">
       <table className="table table-zebra w-full">
@@ -23,7 +30,7 @@ const LessonTable = ({ lessons, onEdit, onDelete, isDeleting }) => {
               <td>{new Date(lesson.updatedAt).toLocaleDateString()}</td>
               <td>
                 <div className="flex gap-2">
-                  <Button variant="secondary" onClick={() => useNavigate(`/edit/${lesson.id}`)}>
+                  <Button variant="secondary" onClick={() => navigate(`/edit/${lesson.id}`)}>
                     Editar
                   </Button>
                   <Button 
