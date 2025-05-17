@@ -8,7 +8,7 @@ const Card = ({ image, icon, title, description, actionText = "Llegir més", onC
                     <img
                         src={image}
                         alt={title}
-                        className="rounded-xl"
+                        className="rounded-xl w-16 h-16 object-cover mb-4"
                     />
                 ) : icon ? (
                     <div className="text-6xl mb-4 text-[color:var(--color-accent)]">{icon}</div>
