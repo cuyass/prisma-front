@@ -17,7 +17,7 @@
         --color-secondary-content: oklch(30% 0.056 229.695);
         --color-accent: oklch(81% 0.111 293.571);
         --color-accent-content: oklch(28% 0.091 267.935);
-        --color-neutral: oklch(71% 0.203 305.504);
+        --color-neutral: oklch(96% 0.001 286.375);
         --color-neutral-content: oklch(0% 0 0);
         --color-info: oklch(68% 0.169 237.323);
         --color-info-content: oklch(97% 0.013 236.62);
@@ -39,16 +39,3 @@
         --font-sans: "Roboto", sans-serif;
     }
 }
-
-/* @layer base {
-
-    h1,
-    h2,
-    h3 {
-        @apply font-title;
-    }
-
-    body {
-        @apply font-body bg-base-100 text-base-content;
-    }
-} */
