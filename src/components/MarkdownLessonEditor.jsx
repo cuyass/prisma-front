@@ -2,12 +2,19 @@ import React, { useEffect, useState } from 'react';
 import MDEditor from '@uiw/react-md-editor';
 import axios from 'axios';
 import Button from './buttons/Button';
+import Alert from './Alert';
 
 const MarkdownLessonEditor = ({ lessonId }) => {
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
+
     const [isSaving, setIsSaving] = useState(false);
+
+    const [alertVisible, setAlertVisible] = useState(false);
+    const [alertMessage, setAlertMessage] = useState('');
+    const [alertVariant, setAlertVariant] = useState('neutral');
+
     const [saved, setSaved] = useState(false);
     const [originalTitle, setOriginalTitle] = useState('');
     const [originalContent, setOriginalContent] = useState('');
@@ -31,20 +38,23 @@ const MarkdownLessonEditor = ({ lessonId }) => {
         setIsSaving(true);
 
         try {
-            const response = await axios.put(`http://localhost:8080/api/v1/lessons/${lessonId}`, {
+            await axios.put(`http://localhost:8080/api/v1/lessons/${lessonId}`, {
                 title,
                 content
             });
 
-            console.log("Resposta del servidor:", response.data);
-
-            setSaved(true);
+            setAlertVariant('success');
+            setAlertMessage('Lliçó guardada correctament!');
+            setAlertVisible(true);
             setOriginalTitle(title);
             setOriginalContent(content);
             setTimeout(() => setSaved(false), 3000);
 
         } catch (err) {
             console.error("Error al guardar:", err);
+            setAlertVariant('error');
+            setAlertMessage('Hi ha hagut un error al guardar la lliçó');
+            setAlertVisible(true);
         } finally {
             setIsSaving(false);
         }
@@ -72,11 +82,11 @@ const MarkdownLessonEditor = ({ lessonId }) => {
                 height={400}
             />
 
-            {saved && (
-                <div className="mt-4 text-green-600 bg-green-100 p-3 rounded-lg">
-                    <strong>Lliçó guardada correctament!</strong> 
-                </div>
-            )}
+            {alertVisible && (
+                    <Alert variant={alertVariant} duration={3} closable>
+                    {alertMessage}
+                    </Alert>
+                )}
 
             <div className="mt-4 flex gap-4">
                 <Button
