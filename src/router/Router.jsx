@@ -13,6 +13,7 @@ function Router() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admindashboard" element={<AdminDashboard />} />
+            <Route path="/edit/:lessonId" element={<MarkdownLessonEditor />} />
 {/*             <Route path="/learn" element={<Learn />} />
             <Route path="/FAQ" element={<FAQ />} />
             <Route path="/directory" element={<Directory />} />

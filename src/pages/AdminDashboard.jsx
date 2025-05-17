@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import MarkdownLessonEditor from "../components/MarkdownLessonEditor";
+import MarkdownLessonEditor from "./MarkdownLessonEditor";
 import Alert from "../components/Alert";
 import Button from "../components/buttons/Button";
 import { useNavigate } from "react-router";
