@@ -23,7 +23,7 @@ const LessonTable = ({ lessons, onEdit, onDelete, isDeleting }) => {
               <td>{new Date(lesson.updatedAt).toLocaleDateString()}</td>
               <td>
                 <div className="flex gap-2">
-                  <Button variant="secondary" onClick={() => onEdit(lesson.id)}>
+                  <Button variant="secondary" onClick={() => useNavigate(`/edit/${lesson.id}`)}>
                     Editar
                   </Button>
                   <Button 

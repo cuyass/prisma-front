@@ -3,6 +3,8 @@ import axios from "axios";
 import MarkdownLessonEditor from "../components/MarkdownLessonEditor";
 import Alert from "../components/Alert";
 import Button from "../components/buttons/Button";
+import { useNavigate } from "react-router";
+import LessonTable from "../components/Table";
 
 const AdminDashboard = () => {
     const [lessons, setLessons] = useState([]);
@@ -34,7 +36,7 @@ const AdminDashboard = () => {
         setLessons(lessons.filter(lesson => lesson.id !== lessonId));
         setTimeout(() => setAlertVisible(false), 3000); 
       } catch (err) {
-        setAlertMessage('Hubo un error al eliminar la lección');
+        setAlertMessage('Hi ha hagut un error eliminant la lliçó');
         setAlertVariant('error');
         setAlertVisible(true);
       } finally {
@@ -56,43 +58,7 @@ const AdminDashboard = () => {
       )}
 
       <div className="overflow-x-auto bg-white rounded-lg shadow-md">
-        <table className="w-full table-auto">
-          <thead>
-            <tr className="bg-gray-200 text-left">
-              <th className="px-4 py-2 font-semibold text-sm text-gray-600">Título</th>
-              <th className="px-4 py-2 font-semibold text-sm text-gray-600">Fragmento de contenido</th>
-              <th className="px-4 py-2 font-semibold text-sm text-gray-600">Fecha de creación</th>
-              <th className="px-4 py-2 font-semibold text-sm text-gray-600">Última actualización</th>
-              <th className="px-4 py-2 font-semibold text-sm text-gray-600">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {lessons.map(lesson => (
-              <tr key={lesson.id} className="border-b hover:bg-gray-50">
-                <td className="px-4 py-2 text-gray-800">{lesson.title}</td>
-                <td className="px-4 py-2 text-gray-600">{lesson.content.substring(0, 100)}...</td>
-                <td className="px-4 py-2 text-gray-600">{new Date(lesson.createdAt).toLocaleDateString()}</td>
-                <td className="px-4 py-2 text-gray-600">{new Date(lesson.updatedAt).toLocaleDateString()}</td>
-                <td className="px-4 py-2">
-                  <div className="flex gap-2">
-                    {/* Botón de Editar */}
-                    <Button variant="primary" onClick={() => {/* Función para editar */}}>
-                      Editar
-                    </Button>
-                    {/* Botón de Eliminar */}
-                    <Button 
-                      variant="error" 
-                      onClick={() => handleDelete(lesson.id)} 
-                      loading={isDeleting}
-                    >
-                      Eliminar
-                    </Button>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <LessonTable />
       </div>
     </div>
   );

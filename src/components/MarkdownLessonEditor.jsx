@@ -3,6 +3,7 @@ import MDEditor from '@uiw/react-md-editor';
 import axios from 'axios';
 import Button from './buttons/Button';
 import Alert from './Alert';
+import { Navigate, useNavigate } from 'react-router';
 
 const MarkdownLessonEditor = ({ lessonId }) => {
 
@@ -48,7 +49,11 @@ const MarkdownLessonEditor = ({ lessonId }) => {
             setAlertVisible(true);
             setOriginalTitle(title);
             setOriginalContent(content);
-            setTimeout(() => setSaved(false), 3000);
+            setTimeout(() => {
+                setSaved(true);
+                setAlertVisible(false);
+                useNavigate('/admindashboard');
+            }, 3000);
 
         } catch (err) {
             console.error("Error al guardar:", err);
