@@ -2,8 +2,8 @@ import React from "react";
 
 const IconSection = () => {
     return (
-        <div className="flex justify-center">
-            <div className="text-center w-24 p-4">
+        <div className="flex justify-center p-6 gap-8 flex-wrap">
+            <div className="text-center w-24">
                 <div className="bg-[color:var(--color-base-200)] w-16 h-16 rounded-full flex justify-center items-center mx-auto mb-3 text-2xl text-[color:var(--color-accent)]">
                     🔒
                 </div>
