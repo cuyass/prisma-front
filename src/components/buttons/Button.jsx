@@ -15,6 +15,7 @@ const Button = ({
     accent: ['var(--color-accent)', 'var(--color-accent-content)'],
     neutral: ['var(--color-neutral)', 'var(--color-neutral-content)'],
     success: ['var(--color-success)', 'var(--color-success-content)'],
+    info: ['var(--color-info)', 'var(--color-info-content)'],
     warning: ['var(--color-warning)', 'var(--color-warning-content)'],
     error: ['var(--color-error)', 'var(--color-error-content)'],
   };

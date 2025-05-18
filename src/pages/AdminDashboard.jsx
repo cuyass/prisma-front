@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import Alert from "../components/Alert";
+import Button from "../components/buttons/Button";
 
 import { useNavigate } from "react-router";
 import LessonTable from "../components/Table";
@@ -62,7 +63,11 @@ function AdminDashboard() {
                     {alertMessage}
                 </Alert>
             )}
-
+            <div>
+            <Button variant="info" onClick={() => navigate(`/edit`)}>
+                    + Crear nova lliçó
+                  </Button>
+                  </div>
             <div className="overflow-x-auto bg-white rounded-lg shadow-md">
                 <LessonTable
                     lessons={lessons}
