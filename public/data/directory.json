@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "title": "OCH - Observatori Contra l'Homofòbia",
+        "title": "OCH - Observatori Contra l'LGTBIfòbia",
         "description": "Organització que lluita contra la discriminació per orientació sexual i identitat de gènere a Catalunya.",
         "category": "lgbt",
         "region": "catalunya",
-        "url": "https://och.cat/"
+        "url": "https://lobservatori.cat/"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "description": "Espai municipal de referència per a la comunitat LGTBI+, que ofereix serveis, activitats i suport.",
         "category": "lgbt",
         "region": "catalunya",
-        "url": "https://centrelgtbibcn.org/"
+        "url": "https://ajuntament.barcelona.cat/lgtbi/ca/serveis/centre-lgtbi-de-barcelona"
     },
     {
         "id": 3,
@@ -37,12 +37,12 @@
         "description": "Associació que treballa per a la normalització del col·lectiu LGBTQ+ a Barcelona.",
         "category": "lgbt",
         "region": "catalunya",
-        "url": "https://www.gag.org/"
+        "url": "https://www.amicsgais.org/"
     },
     {
         "id": 6,
         "title": "Internet Segura For Kids (IS4K)",
-        "description": "Centre de seguretat a Internet per a menors d'edat a Espanya.",
+        "description": "Centre de seguretat a Internet per a menors d'edat a Espanya, forma part de l'INCIBE.",
         "category": "security",
         "region": "spain",
         "url": "https://www.is4k.es/"
@@ -77,7 +77,7 @@
         "description": "Associació que treballa amb persones LGTBI+ migrades, refugiades o sol·licitants d'asil.",
         "category": "lgbt",
         "region": "catalunya",
-        "url": "https://acathi.org/"
+        "url": "https://www.acathi.org/"
     },
     {
         "id": 11,
@@ -101,7 +101,7 @@
         "description": "Centre d'innovació tecnològica de la UPC amb línies de treball en ciberseguretat.",
         "category": "security",
         "region": "catalunya",
-        "url": "https://citic.upc.edu/"
+        "url": "https://cit.upc.edu/ca/"
     },
     {
         "id": 14,
@@ -110,5 +110,13 @@
         "category": "security",
         "region": "catalunya",
         "url": "https://eurecat.org/"
-    }
+    },
+    {
+        "id": 15,
+        "title": "Ajuntament de Barcelona - Àrea LGTBI",
+        "description": "Punt d'informació i recursos sobre drets LGTBI+ i serveis municipals per a la diversitat sexual i de gènere a Barcelona.",
+        "category": "lgbt",
+        "region": "catalunya",
+        "url": "https://ajuntament.barcelona.cat/lgtbi/ca"
+      }
 ]
