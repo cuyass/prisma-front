@@ -1,17 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import HamburgerButton from "./buttons/HamburgerButton";
 
 const Navbar = () => {
+    const location = useLocation();
+    
     return (
         <div className="navbar bg-primary shadow-sm">
             <div className="navbar-start">
+            {location.pathname === "/admindashboard" && (
                 <div className="drawer-content flex flex-col items-center justify-center">
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
                         Admimenú
                     </label>
                 </div>
+            )}
             </div>
             <div className="navbar-center">
                 <a className="font-[Righteous]">PRISMA</a>
