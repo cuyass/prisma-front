@@ -63,11 +63,11 @@ function AdminDashboard() {
                     {alertMessage}
                 </Alert>
             )}
-            <div>
-            <Button variant="info" onClick={() => navigate(`/edit`)}>
-                    + Crear nova lliçó
-                  </Button>
-                  </div>
+            <div className="mb-4 flex justify-start">
+                <Button variant="info" onClick={() => navigate(`/edit`)}>
+                    + Crear nova guia
+                </Button>
+            </div>
             <div className="overflow-x-auto bg-white rounded-lg shadow-md">
                 <LessonTable
                     lessons={lessons}
