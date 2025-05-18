@@ -1,0 +1,88 @@
+{
+    "general": {
+      "title": "Preguntes Generals sobre Ciberseguretat",
+      "questions": [
+        {
+          "id": "why-important",
+          "question": "Per què la ciberseguretat és especialment important per a les persones LGBTQ a Catalunya?",
+          "answer": "Les persones LGBTQ poden enfrontar-se a amenaces específiques en línia com l'assetjament dirigit, el doxxing o la discriminació. A més, aquelles que no han sortit de l'armari en tots els aspectes de la seva vida poden necessitar proteccions de privacitat més fortes per mantenir el control sobre la seva informació personal en diferents contextos socials. A Catalunya, tot i ser una comunitat generalment progressista, persisteixen certs prejudicis i la protecció digital esdevé fonamental."
+        },
+        {
+          "id": "common-threats",
+          "question": "Quines són les amenaces de ciberseguretat més comunes que enfronten les persones LGBTQ a Catalunya?",
+          "answer": "Les amenaces comunes inclouen el doxxing (exposició d'informació personal), campanyes d'assetjament, suplantació d'identitat, filtració de contingut íntim, intents de phishing dirigits i vigilància per part de familiars o parelles hostils. També hi ha grups organitzats d'odi que poden ser particularment actius a les xarxes socials."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacitat i Xarxes Socials",
+      "questions": [
+        {
+          "id": "manage-identities",
+          "question": "Com puc gestionar diferents identitats a diferents plataformes?",
+          "answer": "Considera utilitzar comptes o perfils separats per a diferents contextos. Utilitza la configuració de privacitat per controlar quines audiències veuen el teu contingut. Considera l'ús de pseudònims quan sigui apropiat i revisa regularment la teva empremta digital. A Catalunya, on moltes comunitats són petites, és especialment important gestionar acuradament la teva presència digital."
+        },
+        {
+          "id": "safe-social-media",
+          "question": "Quines xarxes socials són més segures per a persones LGBTQ?",
+          "answer": "Cap xarxa social és completament segura, però busca plataformes amb opcions sòlides de privacitat i contra l'assetjament. Telegram és popular a Catalunya i ofereix grups privats i xats encriptats. Valora plataformes que permetin perfils privats i opcions per bloquejar i informar d'abusos fàcilment."
+        },
+        {
+          "id": "protect-photos",
+          "question": "Com puc protegir les meves fotos i vídeos personals?",
+          "answer": "Utilitza l'autenticació de dos factors per als teus comptes de núvol. Considera l'ús d'aplicacions de galeria amb contrasenyes o bloqueig. Revisa els metadades de les fotos abans de compartir-les, ja que poden revelar la ubicació. Tingues cura amb les aplicacions de datació populars a Catalunya com Grindr o HER, que poden compartir dades de localització."
+        }
+      ]
+    },
+    "harassment": {
+      "title": "Protecció contra l'Assetjament",
+      "questions": [
+        {
+          "id": "online-harassment",
+          "question": "Què he de fer si estic sent assetjat en línia?",
+          "answer": "Documenta tot l'assetjament amb captures de pantalla. Bloqueja i denuncia l'assetjador a la plataforma. No responguis directament. Als casos greus, contacta amb els Mossos d'Esquadra que tenen una unitat especialitzada en delictes d'odi i ciberassetjament. Organitzacions com l'Observatori Contra l'Homofòbia de Catalunya també poden oferir suport."
+        },
+        {
+          "id": "doxxing-protection",
+          "question": "Com puc protegir-me contra el doxxing?",
+          "answer": "Fes cerques regulars del teu nom a Internet. Utilitza eines de privacitat per eliminar la teva informació de bases de dades públiques. Considera utilitzar un apartado de correus o una adreça alternativa per a registres en línia. Sigues conscient de la informació que comparteixes en grups locals catalans o fòrums que podrien revelar la teva ubicació."
+        }
+      ]
+    },
+    "devices": {
+      "title": "Seguretat dels Dispositius",
+      "questions": [
+        {
+          "id": "secure-phone",
+          "question": "Com puc assegurar el meu telèfon mòbil?",
+          "answer": "Utilitza una contrasenya forta o biomètrica. Activa l'encriptació del dispositiu. Instal·la actualitzacions de seguretat regularment. Considera utilitzar una VPN, especialment quan et connectis a WiFi públic en cafeteries, biblioteques o espais públics de Barcelona i altres ciutats catalanes."
+        },
+        {
+          "id": "secure-messaging",
+          "question": "Quines aplicacions de missatgeria són més segures?",
+          "answer": "Signal ofereix encriptació de punta a punta i funcions de privacitat addicionals. Telegram, molt utilitzada a Catalunya, té funcions de xat secret. Evita SMS per a comunicacions sensibles. WhatsApp, l'aplicació més comuna a Catalunya, ofereix encriptació però està vinculada al teu número de telèfon."
+        }
+      ]
+    },
+    "resources": {
+      "title": "Recursos Locals a Catalunya",
+      "questions": [
+        {
+          "id": "local-support",
+          "question": "On puc trobar suport per a problemes de ciberseguretat a Catalunya?",
+          "answer": "El Centre de Seguretat de la Informació de Catalunya (CESICAT) ofereix recursos educatius. La Generalitat disposa de programes de suport per a víctimes de ciberassetjament. Organitzacions com LAMBDA, Casal Lambda a Barcelona, o l'Associació TALCOMSOM a Lleida poden proporcionar assessorament específic per a la comunitat LGBTQ."
+        },
+        {
+          "id": "legal-protection",
+          "question": "Quines lleis catalanes o espanyoles em protegeixen contra la discriminació i l'assetjament en línia?",
+          "answer": "La Llei 11/2014 de Catalunya garanteix els drets de les persones LGBTQ i inclou disposicions contra l'assetjament. La Llei Orgànica 10/2022 espanyola (Llei de Garantia Integral de la Llibertat Sexual) protegeix contra la violència digital. El Codi Penal espanyol conté provisions específiques contra els delictes d'odi, incloent aquells comesos a Internet."
+        },
+        {
+          "id": "local-events",
+          "question": "Hi ha esdeveniments o formacions sobre ciberseguretat per a la comunitat LGBTQ a Catalunya?",
+          "answer": "El Pride Barcelona sol incloure tallers sobre seguretat digital. El Centre LGTBI de Barcelona organitza periòdicament sessions formatives. Hi ha hackathons i esdeveniments tech inclusius com 'Hack4Good' que de vegades aborden temes de seguretat per a col·lectius vulnerables."
+        }
+      ]
+    }
+  }
+  
