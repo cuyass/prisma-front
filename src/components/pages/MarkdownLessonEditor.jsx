@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import MDEditor from '@uiw/react-md-editor';
 import axios from 'axios';
-import Button from '../components/buttons/Button';
-import Alert from '../components/Alert';
+import Button from '../buttons/Button';
+import Alert from '../Alert';
 import { useNavigate } from 'react-router';
 import { useParams } from 'react-router-dom';
 

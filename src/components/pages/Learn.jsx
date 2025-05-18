@@ -2,8 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Card from "../components/Card";
-import Pagination from "../components/Pagination";
+import Card from "../Card";
+import Pagination from "../Pagination";
 
 const Learn = () => {
     const [lessons, setLessons] = useState([]);
