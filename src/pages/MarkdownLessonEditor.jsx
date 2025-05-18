@@ -30,10 +30,16 @@ const MarkdownLessonEditor = () => {
             
             axios.get(`http://localhost:8080/api/v1/lessons/${lessonId}`)
             .then(res => {
-                setTitle(res.data.title);
-                setContent(res.data.content);
-                setOriginalTitle(res.data.title);
-                setOriginalContent(res.data.content);
+                const lessonData = res.data.data;
+                if (!lessonData) {
+                    console.error("No s'ha trobat la lliçó");
+                    return;
+                } 
+                console.log("Lliçó carregada:", lessonData);
+                setTitle(res.data.title || '');
+                setContent(res.data.content || '');
+                setOriginalTitle(res.data.title || '');
+                setOriginalContent(res.data.content || '');
             })
             .catch(err => { console.error("Error al carregar la lliçó:", err)});
         }
