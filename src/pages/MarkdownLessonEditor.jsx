@@ -3,32 +3,40 @@ import MDEditor from '@uiw/react-md-editor';
 import axios from 'axios';
 import Button from '../components/buttons/Button';
 import Alert from '../components/Alert';
-import { Navigate, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
+import { useParams } from 'react-router-dom';
 
-const MarkdownLessonEditor = ({ lessonId }) => {
+const MarkdownLessonEditor = () => {
+
+    const { lessonId } = useParams();
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
     const [isSaving, setIsSaving] = useState(false);
+    const [saved, setSaved] = useState(false);
 
     const [alertVisible, setAlertVisible] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
     const [alertVariant, setAlertVariant] = useState('neutral');
 
-    const [saved, setSaved] = useState(false);
     const [originalTitle, setOriginalTitle] = useState('');
     const [originalContent, setOriginalContent] = useState('');
 
+    const navigate = useNavigate();
+
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/v1/lessons/${lessonId}`)
+        if (lessonId) {
+            
+            axios.get(`http://localhost:8080/api/v1/lessons/${lessonId}`)
             .then(res => {
                 setTitle(res.data.title);
                 setContent(res.data.content);
                 setOriginalTitle(res.data.title);
                 setOriginalContent(res.data.content);
             })
-            .catch(err => console.error("Error al cargar la lliçó:", err));
+            .catch(err => { console.error("Error al carregar la lliçó:", err)});
+        }
     }, [lessonId]);
 
     const hasChanges = title !== originalTitle || content !== originalContent;
@@ -39,20 +47,27 @@ const MarkdownLessonEditor = ({ lessonId }) => {
         setIsSaving(true);
 
         try {
-            await axios.put(`http://localhost:8080/api/v1/lessons/${lessonId}`, {
-                title,
-                content
-            });
 
+            const lessonData = { title, content };
+
+            let response;
+            if (lessonId) {
+                response = await axios.put(`http://localhost:8080/api/v1/lessons/${lessonId}`, lessonData);
+                setAlertMessage('Lliçó actualitzada correctament!');
+            } else {
+                response = await axios.post('http://localhost:8080/api/v1/lessons', lessonData);
+                setAlertMessage('Lliçó creada correctament!');
+            }
+           
             setAlertVariant('success');
-            setAlertMessage('Lliçó guardada correctament!');
             setAlertVisible(true);
             setOriginalTitle(title);
             setOriginalContent(content);
+
             setTimeout(() => {
                 setSaved(true);
                 setAlertVisible(false);
-                useNavigate('/admindashboard');
+                navigate('/admindashboard');
             }, 3000);
 
         } catch (err) {
@@ -66,9 +81,10 @@ const MarkdownLessonEditor = ({ lessonId }) => {
     };
 
     const handleCancel = () => {
-        if (hasChanges && window.confirm("Estàs seguri de guardar els canvis?")) {
+        if (hasChanges && window.confirm("Estàs seguri de cancel·lar els canvis?")) {
             setTitle(originalTitle);
             setContent(originalContent);
+            navigate('/admindashboard');
         }
     };
 
@@ -89,7 +105,7 @@ const MarkdownLessonEditor = ({ lessonId }) => {
 
             {alertVisible && (
                     <Alert variant={alertVariant} duration={3} closable>
-                    {alertMessage}
+                        {alertMessage}
                     </Alert>
                 )}
 
