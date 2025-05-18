@@ -20,7 +20,7 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-40 p-2 shadow">
                 <li className="font-body"><Link to="/" className="block w-full text-right">Inici</Link></li>
                 <li className="font-body"><Link to="/admindashboard" className="block w-full text-right">Panell d'administrador</Link></li>
-                <li className="font-body"><Link to="/learn" className="block w-full text-right">Aprendre</Link></li>
+                <li className="font-body"><Link to="/learn" className="block w-full text-right">Guies</Link></li>
                 {/* 
                 <li className="font-[Roboto]"><Link to="/FAQ">FAQ</Link></li>
                 <li className="font-[Roboto]"><Link to="/directory">Directori</Link></li>
