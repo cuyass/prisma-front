@@ -11,7 +11,7 @@ const MarkdownLessonEditor = () => {
     const { lessonId } = useParams();
 
     const [title, setTitle] = useState('');
-    const [content, setContent] = useState('');
+    const [markdownContent, setMarkdownContent] = useState('');
 
     const [isSaving, setIsSaving] = useState(false);
     const [saved, setSaved] = useState(false);
@@ -37,15 +37,15 @@ const MarkdownLessonEditor = () => {
                 } 
                 console.log("Lliçó carregada:", lessonData);
                 setTitle(res.data.title || '');
-                setContent(res.data.content || '');
+                setMarkdownContent(res.data.markdownContent || '');
                 setOriginalTitle(res.data.title || '');
-                setOriginalContent(res.data.content || '');
+                setOriginalContent(res.data.markdownContent || '');
             })
             .catch(err => { console.error("Error al carregar la lliçó:", err)});
         }
     }, [lessonId]);
 
-    const hasChanges = title !== originalTitle || content !== originalContent;
+    const hasChanges = title !== originalTitle || markdownContent !== originalContent;
 
     const handleSave = async () => {
         if (!hasChanges) return;
@@ -54,12 +54,14 @@ const MarkdownLessonEditor = () => {
 
         try {
 
-            const lessonData = { title, content };
+            
+            const lessonData = { title, markdownContent };
 
             let response;
             if (lessonId) {
                 response = await axios.put(`http://localhost:8080/api/v1/lessons/${lessonId}`, lessonData);
                 setAlertMessage('Lliçó actualitzada correctament!');
+                console.log("Saving lesson data:", lessonData);
             } else {
                 response = await axios.post('http://localhost:8080/api/v1/lessons', lessonData);
                 setAlertMessage('Lliçó creada correctament!');
@@ -68,7 +70,7 @@ const MarkdownLessonEditor = () => {
             setAlertVariant('success');
             setAlertVisible(true);
             setOriginalTitle(title);
-            setOriginalContent(content);
+            setOriginalContent(markdownContent);
 
             setTimeout(() => {
                 setSaved(true);
@@ -104,8 +106,8 @@ const MarkdownLessonEditor = () => {
             />
 
             <MDEditor
-                value={content}
-                onChange={setContent}
+                value={markdownContent}
+                onChange={setMarkdownContent}
                 height={400}
             />
 
