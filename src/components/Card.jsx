@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./buttons/Button";
 
 const Card = ({ image, icon, title, description, actionText = "Llegir més", onClick }) => {
     return (
@@ -18,12 +19,9 @@ const Card = ({ image, icon, title, description, actionText = "Llegir més", onC
                 <h2 className="card-title text-[color:var(--color-base-content)]">{title}</h2>
                 <p className="text-[color:var(--color-base-content)] opacity-70">{description}</p>
                 <div className="card-actions">
-                    <button
-                        className="btn bg-[color:var(--color-accent)] text-[color:var(--color-accent-content)] hover:opacity-90 border-none rounded-[var(--radius-selector)]"
-                        onClick={onClick}
-                    >
+                    <Button onClick={onClick} variant="accent">
                         {actionText}
-                    </button>
+                    </Button>
                 </div>
             </div>
         </div>
