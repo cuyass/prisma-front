@@ -25,11 +25,11 @@ const Learn = () => {
                 },
             });
             console.log('API Response:', response.data);
-            setLessons(response.data.data || []); // Use response.data directly
-        setTotalPages(Math.ceil((response.data.data?.length || 0) / lessonsPerPage)); // Calculate total pages
+            setLessons(response.data.data || []);
+        setTotalPages(Math.ceil((response.data.data?.length || 0) / lessonsPerPage)); 
         } catch (err) {
-            console.error(err); // Debugging
-            setError('Hubo un error al cargar las lecciones');
+            console.error(err);
+            setError('Hi ha hagut un error carregant les guies.');
         } finally {
             setLoading(false);
             
@@ -54,7 +54,7 @@ const Learn = () => {
     console.log("Lessons:", lessons);
     return (
         <div className="max-w-7xl mx-auto p-6">
-            <h1 className="text-3xl font-semibold font-[Righteous] mb-6">Guies</h1>
+            <h1 className="text-3xl text-center font-[Righteous] mb-6">Guies</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {Array.isArray(lessons) && lessons.length === 0 ? (
                     <p>No hi ha guies disponibles.</p>
