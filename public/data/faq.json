@@ -4,12 +4,12 @@
       "questions": [
         {
           "id": "why-important",
-          "question": "Per què la ciberseguretat és especialment important per a les persones LGBTQ a Catalunya?",
-          "answer": "Les persones LGBTQ poden enfrontar-se a amenaces específiques en línia com l'assetjament dirigit, el doxxing o la discriminació. A més, aquelles que no han sortit de l'armari en tots els aspectes de la seva vida poden necessitar proteccions de privacitat més fortes per mantenir el control sobre la seva informació personal en diferents contextos socials. A Catalunya, tot i ser una comunitat generalment progressista, persisteixen certs prejudicis i la protecció digital esdevé fonamental."
+          "question": "Per què la ciberseguretat és especialment important per a les persones LGBTQ+?",
+          "answer": "Les persones LGBTQ+ poden enfrontar-se a amenaces específiques en línia com l'assetjament dirigit, el doxxing o la discriminació. A més, aquelles que no han sortit de l'armari en tots els aspectes de la seva vida, poden necessitar proteccions de privacitat més fortes per mantenir el control sobre la seva informació personal en diferents contextos socials. A Catalunya, tot i ser una comunitat generalment progressista, persisteixen certs prejudicis i la protecció digital esdevé fonamental."
         },
         {
           "id": "common-threats",
-          "question": "Quines són les amenaces de ciberseguretat més comunes que enfronten les persones LGBTQ a Catalunya?",
+          "question": "Quines són les amenaces de ciberseguretat més comunes que enfronten les persones LGBTQ+?",
           "answer": "Les amenaces comunes inclouen el doxxing (exposició d'informació personal), campanyes d'assetjament, suplantació d'identitat, filtració de contingut íntim, intents de phishing dirigits i vigilància per part de familiars o parelles hostils. També hi ha grups organitzats d'odi que poden ser particularment actius a les xarxes socials."
         }
       ]
@@ -30,7 +30,7 @@
         {
           "id": "protect-photos",
           "question": "Com puc protegir les meves fotos i vídeos personals?",
-          "answer": "Utilitza l'autenticació de dos factors per als teus comptes de núvol. Considera l'ús d'aplicacions de galeria amb contrasenyes o bloqueig. Revisa els metadades de les fotos abans de compartir-les, ja que poden revelar la ubicació. Tingues cura amb les aplicacions de datació populars a Catalunya com Grindr o HER, que poden compartir dades de localització."
+          "answer": "Utilitza l'autenticació de dos factors per als teus comptes de núvol. Considera l'ús d'aplicacions de galeria amb contrasenyes o bloqueig. Revisa els metadades de les fotos abans de compartir-les, ja que poden revelar la ubicació. Tingues cura amb les aplicacions de cites com ara Grindr o HER, que poden compartir dades de localització."
         }
       ]
     },
@@ -45,7 +45,7 @@
         {
           "id": "doxxing-protection",
           "question": "Com puc protegir-me contra el doxxing?",
-          "answer": "Fes cerques regulars del teu nom a Internet. Utilitza eines de privacitat per eliminar la teva informació de bases de dades públiques. Considera utilitzar un apartado de correus o una adreça alternativa per a registres en línia. Sigues conscient de la informació que comparteixes en grups locals catalans o fòrums que podrien revelar la teva ubicació."
+          "answer": "Fes cerques regulars del teu nom a Internet. Utilitza eines de privacitat per eliminar la teva informació de bases de dades públiques. Considera utilitzar un apartat de correus o una adreça alternativa per a registres en línia. Sigues conscient de la informació que comparteixes en grups locals catalans o fòrums que podrien revelar la teva ubicació."
         }
       ]
     },
@@ -55,12 +55,12 @@
         {
           "id": "secure-phone",
           "question": "Com puc assegurar el meu telèfon mòbil?",
-          "answer": "Utilitza una contrasenya forta o biomètrica. Activa l'encriptació del dispositiu. Instal·la actualitzacions de seguretat regularment. Considera utilitzar una VPN, especialment quan et connectis a WiFi públic en cafeteries, biblioteques o espais públics de Barcelona i altres ciutats catalanes."
+          "answer": "Utilitza una contrasenya forta o biomètrica. Activa l'encriptació del dispositiu. Instal·la actualitzacions de seguretat regularment. Considera utilitzar una VPN, especialment quan et connectis a WiFi públic en cafeteries, biblioteques o espais públics."
         },
         {
           "id": "secure-messaging",
           "question": "Quines aplicacions de missatgeria són més segures?",
-          "answer": "Signal ofereix encriptació de punta a punta i funcions de privacitat addicionals. Telegram, molt utilitzada a Catalunya, té funcions de xat secret. Evita SMS per a comunicacions sensibles. WhatsApp, l'aplicació més comuna a Catalunya, ofereix encriptació però està vinculada al teu número de telèfon."
+          "answer": "Signal ofereix encriptació de punta a punta i funcions de privacitat addicionals. Telegram té funcions de xat secret. Evita SMS per a comunicacions sensibles. WhatsApp, l'aplicació més comuna a Catalunya, ofereix encriptació però està vinculada al teu número de telèfon."
         }
       ]
     },
@@ -70,7 +70,7 @@
         {
           "id": "local-support",
           "question": "On puc trobar suport per a problemes de ciberseguretat a Catalunya?",
-          "answer": "El Centre de Seguretat de la Informació de Catalunya (CESICAT) ofereix recursos educatius. La Generalitat disposa de programes de suport per a víctimes de ciberassetjament. Organitzacions com LAMBDA, Casal Lambda a Barcelona, o l'Associació TALCOMSOM a Lleida poden proporcionar assessorament específic per a la comunitat LGBTQ."
+          "answer": "El Centre de Seguretat de la Informació de Catalunya (CESICAT) ofereix recursos educatius. La Generalitat disposa de programes de suport per a víctimes de ciberassetjament. Organitzacions com LAMBDA, Casal Lambda i el Centre LGTBI a Barcelona, o l'Associació TALCOMSOM a Lleida poden proporcionar assessorament específic per a la comunitat LGBTQ."
         },
         {
           "id": "legal-protection",
