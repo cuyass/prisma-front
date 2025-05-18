@@ -2,7 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import AdminDashboard from '../pages/AdminDashboard';
 import MarkdownLessonEditor from '../pages/MarkdownLessonEditor';
-/* import Learn from '../pages/Learn';
+import Learn from '../pages/Learn';
+/* 
 import FAQ from '../pages/FAQ';
 import Directory from '../pages/Directory';
 
@@ -15,7 +16,8 @@ function Router() {
             <Route path="/" element={<Home />} />
             <Route path="/admindashboard" element={<AdminDashboard />} />
             <Route path="/edit/:lessonId" element={<MarkdownLessonEditor />} />
-{/*             <Route path="/learn" element={<Learn />} />
+            <Route path="/learn" element={<Learn />} />
+{/*             
             <Route path="/FAQ" element={<FAQ />} />
             <Route path="/directory" element={<Directory />} />
             

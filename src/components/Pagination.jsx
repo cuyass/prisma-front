@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './buttons/Button';
-import ButtonPagination from './buttons/ButtonPagination';
+import ButtonPagination from './buttons/PaginationButton';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     const handlePageChange = (page) => {
