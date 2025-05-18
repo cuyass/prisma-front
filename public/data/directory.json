@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "title": "OCH - Observatori Contra l'Homofòbia",
+        "description": "Organització que lluita contra la discriminació per orientació sexual i identitat de gènere a Catalunya.",
+        "category": "lgbt",
+        "region": "catalunya",
+        "url": "https://och.cat/"
+    },
+    {
+        "id": 2,
+        "title": "Centre LGTBI de Barcelona",
+        "description": "Espai municipal de referència per a la comunitat LGTBI+, que ofereix serveis, activitats i suport.",
+        "category": "lgbt",
+        "region": "catalunya",
+        "url": "https://centrelgtbibcn.org/"
+    },
+    {
+        "id": 3,
+        "title": "Agència de Ciberseguretat de Catalunya",
+        "description": "Organisme que treballa per la seguretat digital de la ciutadania i empreses catalanes.",
+        "category": "security",
+        "region": "catalunya",
+        "url": "https://ciberseguretat.gencat.cat/"
+    },
+    {
+        "id": 4,
+        "title": "INCIBE - Instituto Nacional de Ciberseguridad",
+        "description": "Entitat de referència per al desenvolupament de la ciberseguretat i confiança digital a Espanya.",
+        "category": "security",
+        "region": "spain",
+        "url": "https://www.incibe.es/"
+    },
+    {
+        "id": 5,
+        "title": "GAG - Grup d'Amics Gais",
+        "description": "Associació que treballa per a la normalització del col·lectiu LGBTQ+ a Barcelona.",
+        "category": "lgbt",
+        "region": "catalunya",
+        "url": "https://www.gag.org/"
+    },
+    {
+        "id": 6,
+        "title": "Internet Segura For Kids (IS4K)",
+        "description": "Centre de seguretat a Internet per a menors d'edat a Espanya.",
+        "category": "security",
+        "region": "spain",
+        "url": "https://www.is4k.es/"
+    },
+    {
+        "id": 7,
+        "title": "FLG - Associació de Famílies LGTBI",
+        "description": "Associació que dona suport a famílies amb membres LGBTQ+ a Catalunya.",
+        "category": "lgbt",
+        "region": "catalunya",
+        "url": "https://www.familieslg.org/"
+    },
+    {
+        "id": 8,
+        "title": "CCN-CERT",
+        "description": "Capacitat de resposta a incidents de seguretat de la informació del Centre Criptològic Nacional.",
+        "category": "security",
+        "region": "spain",
+        "url": "https://www.ccn-cert.cni.es/"
+    },
+    {
+        "id": 9,
+        "title": "Casal Lambda",
+        "description": "Associació històrica que ofereix recursos i suport al col·lectiu LGTBI+ a Barcelona.",
+        "category": "lgbt",
+        "region": "catalunya",
+        "url": "https://www.lambda.cat/"
+    },
+    {
+        "id": 10,
+        "title": "ACATHI",
+        "description": "Associació que treballa amb persones LGTBI+ migrades, refugiades o sol·licitants d'asil.",
+        "category": "lgbt",
+        "region": "catalunya",
+        "url": "https://acathi.org/"
+    },
+    {
+        "id": 11,
+        "title": "Pride! BCN",
+        "description": "Organització darrere de l'esdeveniment anual Pride de Barcelona.",
+        "category": "lgbt",
+        "region": "catalunya",
+        "url": "https://www.pridebarcelona.org/"
+    },
+    {
+        "id": 12,
+        "title": "FELGTBI+ - Federación Estatal LGTBI+",
+        "description": "Federació que coordina el moviment associatiu LGTBI+ a l'estat espanyol.",
+        "category": "lgbt",
+        "region": "spain",
+        "url": "https://felgtbi.org/"
+    },
+    {
+        "id": 13,
+        "title": "CITIC-UPC",
+        "description": "Centre d'innovació tecnològica de la UPC amb línies de treball en ciberseguretat.",
+        "category": "security",
+        "region": "catalunya",
+        "url": "https://citic.upc.edu/"
+    },
+    {
+        "id": 14,
+        "title": "Eurecat - Centre Tecnològic de Catalunya",
+        "description": "Centre de recerca i desenvolupament amb projectes en ciberseguretat i tecnologies digitals.",
+        "category": "security",
+        "region": "catalunya",
+        "url": "https://eurecat.org/"
+    }
+]
