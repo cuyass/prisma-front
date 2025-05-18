@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 import Alert from "../Alert";
 import Button from "../buttons/Button";
-
-import { useNavigate } from "react-router";
 import LessonTable from "../Table";
+import Drawer from "../Drawer";
 
 function AdminDashboard() {
     const [lessons, setLessons] = useState([]);
@@ -68,12 +68,17 @@ function AdminDashboard() {
                     + Crear nova guia
                 </Button>
             </div>
-            <div className="overflow-x-auto bg-white rounded-lg shadow-md">
-                <LessonTable
-                    lessons={lessons}
-                    onDelete={handleDelete}
-                    onEdit={handleEdit}
-                    isDeleting={isDeleting} />
+            <div className="flex flex-col lg:flex-row gap-6">
+                <div className="lg:w-1/4 w-full">
+                    <Drawer />
+                </div>
+                <div className="lg:w-3/4 w-full overflow-x-auto bg-white rounded-lg shadow-md">
+                    <LessonTable
+                        lessons={lessons}
+                        onDelete={handleDelete}
+                        onEdit={handleEdit}
+                        isDeleting={isDeleting} />
+                </div>
             </div>
         </div>
     );
