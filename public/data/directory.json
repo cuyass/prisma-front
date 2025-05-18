@@ -33,11 +33,11 @@
     },
     {
         "id": 5,
-        "title": "GAG - Grup d'Amics Gais",
-        "description": "Associació que treballa per a la normalització del col·lectiu LGBTQ+ a Barcelona.",
+        "title": "Diputació de Barcelona - Àrea LGTBI",
+        "description": "Recursos, serveis i suport que la Diputació de Barcelona ofereix als municipis per desenvolupar polítiques LGTBI i un directori d'entitats.",
         "category": "lgbt",
         "region": "catalunya",
-        "url": "https://www.amicsgais.org/"
+        "url": "https://www.diba.cat/ca/web/lgtbi/entitats-lgtbi"
     },
     {
         "id": 6,
@@ -73,11 +73,11 @@
     },
     {
         "id": 10,
-        "title": "ACATHI",
-        "description": "Associació que treballa amb persones LGTBI+ migrades, refugiades o sol·licitants d'asil.",
+        "title": "Colors de Ponent",
+        "description": "Col·lectiu LGTBIQ+ de les terres de Lleida que ofereix activitats, suport i serveis per a la comunitat.",
         "category": "lgbt",
         "region": "catalunya",
-        "url": "https://www.acathi.org/"
+        "url": "https://colorsdeponent.cat/"
     },
     {
         "id": 11,
@@ -118,5 +118,13 @@
         "category": "lgbt",
         "region": "catalunya",
         "url": "https://ajuntament.barcelona.cat/lgtbi/ca"
-      }
+    },
+    {
+        "id": 16,
+        "title": "Tal Com Som",
+        "description": "Associació LGTBIQ+ de les comarques gironines que treballa per la visibilitat i els drets del col·lectiu.",
+        "category": "lgbt",
+        "region": "catalunya",
+        "url": "https://talcomsom.org/"
+    }
 ]
