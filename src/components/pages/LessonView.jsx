@@ -27,15 +27,20 @@ const LessonView = () => {
     if (!lesson) return <div className="p-4">Lliçó no trobada</div>;
     return (
         <div className="p-6 max-w-4xl mx-auto bg-white shadow rounded-md">
+            <div className="gap-4 py-5 w-30">
             <Button variant="info" onClick={() => navigate(`/learn`)}>
                 ← Tornar
             </Button>
+            </div>
             <h1 className="text-3xl font-bold mb-4">{lesson.title}</h1>
 
             <article className="prose max-w-none prose-sm sm:prose lg:prose-lg">
                 <ReactMarkdown>{lesson.markdownContent}</ReactMarkdown>
             </article>
-            <div className="mt-6">
+            <div className="mt-6 grid grid-cols-1 gap-4 w-40">
+                <Button variant="warning" onClick={() => navigate(`/learn/${id}/quiz`)}>
+                    Començar quiz!
+                </Button>
                 <Button variant="info" onClick={() => navigate(`/learn`)}>
                     ← Tornar
                 </Button>
