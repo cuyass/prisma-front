@@ -91,7 +91,7 @@ const MarkdownLessonEditor = () => {
     const handleCancel = () => {
         if (hasChanges && window.confirm("Estàs seguri de cancel·lar els canvis?")) {
             setTitle(originalTitle);
-            setContent(originalContent);
+            setMarkdownContent(originalContent);
             navigate('/admindashboard');
         }
     };

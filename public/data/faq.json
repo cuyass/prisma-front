@@ -23,6 +23,12 @@
                 "answer": "Considera utilitzar comptes o perfils separats per a diferents contextos. Utilitza la configuració de privacitat per controlar quines audiències veuen el teu contingut. Considera l'ús de pseudònims quan sigui apropiat i revisa regularment la teva empremta digital. A Catalunya, on moltes comunitats són petites, és especialment important gestionar acuradament la teva presència digital."
             },
             {
+                "id": "work-privacy",
+                "question": "Com puc protegir la meva identitat LGBTQ+ a la feina en línia?",
+                "answer": "Utilitza canals de comunicació separats (per exemple, un correu personal i un de professional). Configura perfils socials amb visibilitat restringida. A les reunions per videoconferència, pots ajustar el teu nom o fons de pantalla per controlar el que comparteixes visualment."
+              },
+              
+            {
                 "id": "safe-social-media",
                 "question": "Quines xarxes socials són més segures per a persones LGBTQ?",
                 "answer": "Cap xarxa social és completament segura, però busca plataformes amb opcions sòlides de privacitat i contra l'assetjament. Telegram és popular a Catalunya i ofereix grups privats i xats encriptats. Valora plataformes que permetin perfils privats i opcions per bloquejar i informar d'abusos fàcilment."
@@ -61,7 +67,17 @@
                 "id": "secure-messaging",
                 "question": "Quines aplicacions de missatgeria són més segures?",
                 "answer": "Signal ofereix encriptació de punta a punta i funcions de privacitat addicionals. Telegram té funcions de xat secret. Evita SMS per a comunicacions sensibles. WhatsApp, l'aplicació més comuna a Catalunya, ofereix encriptació però està vinculada al teu número de telèfon."
-            }
+            },
+            {
+                "id": "secure-email",
+                "question": "Quin correu electrònic és recomanable per a més privacitat?",
+                "answer": "Utilitza serveis que ofereixen encriptació de punta a punta, com ProtonMail o Tutanota. Aquests serveis no escanegen els teus missatges per a publicitat i tenen la seu en països amb lleis de privacitat fortes. És una bona opció si necessites protegir la teva identitat o comunicar-te sobre temes sensibles."
+              },
+              {
+                "id": "email-anonymity",
+                "question": "Com puc crear un correu electrònic anònim?",
+                "answer": "Evita utilitzar el teu nom real o número de telèfon. Utilitza navegació privada i una VPN quan creïs el compte. ProtonMail permet registrar-se sense donar informació personal. És útil per separar identitats (per exemple, activisme, cites, feina)."
+              }
         ]
     },
     "resources": {
