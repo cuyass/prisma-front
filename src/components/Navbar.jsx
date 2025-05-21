@@ -55,12 +55,8 @@ const Navbar = () => {
                         <li><Link to="/learn" className="font-[Roboto]">Guies</Link></li>
                         <li><Link to="/FAQ" className="font-[Roboto]">FAQ</Link></li>
                         <li><Link to="/directory" className="font-[Roboto]">Directori</Link></li>
-                        {/* 
-                
-                
-                <li><Link to="/register" className="font-[Roboto]">Registrar-se</Link></li>
-                <li><Link to="/login" className="font-[Roboto]">Iniciar sessió</Link></li>
-                 */}
+                        <li><Link to="/register" className="font-[Roboto]">Registrar-se</Link></li>
+               
                     </ul>
                 </div>
             </div>

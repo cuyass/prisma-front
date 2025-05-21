@@ -7,12 +7,8 @@ import LessonView from '../components/pages/LessonView';
 import LessonQuiz from '../components/pages/LessonQuiz';
 import FAQ from '../components/pages/FAQ';
 import Directory from '../components/pages/Directory';
-/* 
+import Register from '../components/pages/Register';
 
-
-
-import Register from '../pages/Register';
-import Login from '../pages/Login'; */
 
 function Router() {
     return (
@@ -26,14 +22,7 @@ function Router() {
             <Route path="/learn/:id/quiz" element={<LessonQuiz />} />
             <Route path="/FAQ" element={<FAQ />} />
             <Route path="/directory" element={<Directory />} />
-            {/*
-            
-{/*             
-            
-            
-            
             <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} /> */}
         </Routes>
     );
 }
