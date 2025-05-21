@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Search, MapPin, Shield, Heart, Globe } from 'lucide-react';
 import Card from '../Card';
 import Button from '../buttons/Button';
+import Pagination from '../Pagination';
 
 const Directory = () => {
     const [resources, setResources] = useState([]);
@@ -9,6 +10,9 @@ const Directory = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [regionFilter, setRegionFilter] = useState('all');
     const [loading, setLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+
+const resourcesPerPage = 8;
 
     useEffect(() => {
         fetch('/data/directory.json')
@@ -23,6 +27,10 @@ const Directory = () => {
             });
     }, []);
 
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [activeFilter, regionFilter, searchTerm]);
+    
     const categories = [
         { id: 'all', name: 'Tots els Recursos', icon: Globe, color: 'text-gray-700' },
         { id: 'lgbt', name: 'Recursos LGBTQ+', icon: Heart, color: 'text-purple-500' },
@@ -43,6 +51,11 @@ const Directory = () => {
             resource.description.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesCategory && matchesRegion && matchesSearch;
     });
+
+    const indexOfLastResource = currentPage * resourcesPerPage;
+    const indexOfFirstResource = indexOfLastResource - resourcesPerPage;
+    const paginatedResources = filteredResources.slice(indexOfFirstResource, indexOfLastResource);
+    const totalPages = Math.ceil(filteredResources.length / resourcesPerPage);
 
     return (
         <div className="min-h-screen bg-base-200">
@@ -102,9 +115,10 @@ const Directory = () => {
                 {loading ? (
                     <div className="text-center py-20 text-gray-500 text-lg">Carregant recursos...</div>
                 ) : (
+                    <>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        {filteredResources.length > 0 ? (
-                            filteredResources.map((resource) => (
+                        {paginatedResources.length > 0 ? (
+                            paginatedResources.map((resource) => (
                                 <Card
                                     key={resource.id}
                                     image={resource.imgSrc}
@@ -129,6 +143,14 @@ const Directory = () => {
                             </div>
                         )}
                     </div>
+                    {totalPages > 1 && (
+                            <Pagination
+                                currentPage={currentPage}
+                                totalPages={totalPages}
+                                onPageChange={setCurrentPage}
+                            />
+                        )}
+                    </>
                 )}
             </div>
 
@@ -136,7 +158,7 @@ const Directory = () => {
                 <div className="container mx-auto text-center">
                     <h2 className="text-2xl font-bold mb-4">Coneixes algun recurs que hauria d'estar aquí?</h2>
                     <p className="text-gray-600 max-w-xl mx-auto mb-6">
-                        Ajuda'ns a millorar aquest directori recomanant recursos LGBTQ+ i de ciberseguretat que consideris valuosos per a la comunitat. Escriu-nos a <p className=" underline">holaprisma@protonmail.com</p>
+                        Ajuda'ns a millorar aquest directori recomanant recursos LGBTQ+ i de ciberseguretat que consideris valuosos per a la comunitat. Escriu-nos a <span className=" underline">holaprisma@protonmail.com</span>
                     </p>
                     <p className="text-gray-600 max-w-xl mx-auto mb-2">També pots clicar aquí</p>
                     <a href="mailto:holaprisma@protonmail.com">
