@@ -18,7 +18,7 @@ const Alert = ({
 
             return () => clearTimeout(timer);
         }
-    }, [duration]);
+    }, [duration, children]);
 
 
 
