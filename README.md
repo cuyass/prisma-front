@@ -77,17 +77,23 @@ http://localhost:8080/api/v1
 ## Testing i funcionalitat
 
 Lliçons es renderitzen via MarkdownLesson.jsx
+
 El Quiz es gestiona amb LessonQuiz.jsx, sense entitat pròpia (només preguntes i respostes)
+
 Els components Alert, Drawer, Navbar, Pagination, etc., milloren l’experiència d’usuari
+
 Es mostra una alerta personalitzada amb variant i duració per a missatges d'èxit o error
 
 ## Estils i UX
 
 Utilitza Tailwind CSS i DaisyUI per a disseny responsive i accessible
+
 Missatges d'alerta amb botó de tancar i temporitzador opcional (Alert.jsx)
+
 Navegació clara amb Navbar.jsx i rutes controlades via Router.jsx
 
 ## Crèdits
 
 Desenvolupat per Marion
+
 Contacte: https://www.linkedin.com/in/mariona-cuyas/
