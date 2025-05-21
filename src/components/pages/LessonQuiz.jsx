@@ -45,7 +45,7 @@ const LessonQuiz = () => {
                     ← Tornar
                 </Button>
             </div>
-            <h2 className="text-2xl font-bold mb-4">Quiz!</h2>
+            <h1 className="text-4xl font-[Righteous] text-center mb-15">Quiz!</h1>
             {questions.length === 0 && (
                 <div className="mt-4">
                     Encara no hi ha preguntes disponibles, sashay away!
