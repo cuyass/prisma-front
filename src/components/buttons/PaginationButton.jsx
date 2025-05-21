@@ -7,6 +7,7 @@ const PaginationButton = ({ children, onClick, disabled = false, isActive = fals
       onClick={onClick}
       disabled={disabled}
       variant={isActive ? 'primary' : 'ghost'}
+      isActive={isActive}
       aria-current={isActive ? 'page' : undefined}
     >
       {children}
