@@ -6,6 +6,7 @@ const Button = ({
   disabled = false,
   loading = false,
   variant = 'primary',
+  isActive = false,
   ...props
 }) => {
  
@@ -18,6 +19,7 @@ const Button = ({
     info: ['var(--color-info)', 'var(--color-info-content)'],
     warning: ['var(--color-warning)', 'var(--color-warning-content)'],
     error: ['var(--color-error)', 'var(--color-error-content)'],
+    ghost: ['transparent', 'var(--color-primary)'],
   };
 
   const [bgColor, textColor] = variantColors[variant] || variantColors.primary;
@@ -32,8 +34,8 @@ const Button = ({
         color: disabled || loading ? '#ccc' : textColor,
         borderRadius: 'var(--radius-field)',
         padding: '0.5rem 1.25rem',
-        border: 'none',
-        fontWeight: '600',
+        border: isActive ? '2px solid var(--color-primary)' : 'none',
+        fontWeight: isActive ? '700' : '600',
         fontFamily: 'var(--font-sans)',
         cursor: disabled || loading ? 'not-allowed' : 'pointer',
         transition: 'background-color 0.3s ease',
