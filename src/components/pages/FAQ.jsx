@@ -16,8 +16,8 @@ const FAQ = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10">
-      <h1 className="text-3xl font-[Righteous] text-center mb-8 text-[color:var(--color-base-content)]">
+    <div className="bg-base-200 max-w-4xl mx-auto px-4 py-10">
+      <h1 className="text-4xl font-[Righteous] text-center mb-8 text-[color:var(--color-base-content)]">
         Preguntes Freqüents
       </h1>
 

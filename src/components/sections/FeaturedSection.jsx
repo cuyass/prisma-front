@@ -45,7 +45,7 @@ const FeaturedContent = () => {
     };
   
     return (
-      <div className="px-6 max-w-6xl mx-auto mb-12">
+      <div className="bg-base-200 px-6 max-w-6xl mx-auto mb-12">
         <h2 className="text-xl font-bold text-center mb-6 text-[color:var(--color-base-content)] font-[Roboto]">
           Recursos Destacats
         </h2>

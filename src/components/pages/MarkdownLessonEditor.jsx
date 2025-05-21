@@ -97,7 +97,7 @@ const MarkdownLessonEditor = () => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-6">
+        <div className="bg-base-200 max-w-4xl mx-auto p-6">
             <input
                 className="w-full border p-2 text-xl font-semibold mb-4"
                 placeholder="Títol de la lliçó"

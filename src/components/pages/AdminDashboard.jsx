@@ -53,9 +53,9 @@ function AdminDashboard() {
     };
     console.log("Lecciones:", lessons);
     return (
-        <div className="min-h-screen bg-gray-100 p-6">
+        <div className="min-h-screen bg-base-200 p-6">
             <div className="mb-6">
-                <h1 className="text-center text-3xl font-[Righteous]">Panell d'administrador</h1>
+                <h1 className="text-center text-4xl font-[Righteous]">Panell d'administrador</h1>
             </div>
 
             {alertVisible && (

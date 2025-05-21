@@ -2,7 +2,7 @@ import React from "react";
 
 const IconSection = () => {
     return (
-        <div className="flex justify-center p-6 gap-8 flex-wrap">
+        <div className="bg-base-200 flex justify-center p-6 gap-8 flex-wrap">
 
             <div className="text-center w-24">
                 <div className="bg-gradient-to-br from-[color:var(--color-error)] via-[color:var(--color-warning)] to-[color:var(--color-accent)] w-16 h-16 rounded-full flex justify-center items-center mx-auto mb-3 p-1">

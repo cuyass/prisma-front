@@ -45,7 +45,7 @@ const Directory = () => {
     });
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-base-200">
             <div className="bg-gradient-to-r from-pink-400 via-orange-300 to-blue-300 h-2"></div>
 
             <div className="container mx-auto px-4 py-12">

@@ -39,7 +39,7 @@ const LessonQuiz = () => {
     }, 0);
 
     return (
-        <div className="p-4">
+        <div className="bg-base-200 p-4">
             <div className="gap-4 py-5 w-30">
                 <Button variant="info" onClick={() => navigate(`/learn/${id}`)}>
                     ← Tornar
