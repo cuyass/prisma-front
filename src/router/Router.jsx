@@ -8,6 +8,7 @@ import LessonQuiz from '../components/pages/LessonQuiz';
 import FAQ from '../components/pages/FAQ';
 import Directory from '../components/pages/Directory';
 import Register from '../components/pages/Register';
+import NotFound from '../components/pages/NotFound';
 
 
 function Router() {
@@ -23,6 +24,7 @@ function Router() {
             <Route path="/FAQ" element={<FAQ />} />
             <Route path="/directory" element={<Directory />} />
             <Route path="/register" element={<Register />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     );
 }
