@@ -4,6 +4,7 @@ import AdminDashboard from '../components/pages/AdminDashboard';
 import MarkdownLessonEditor from '../components/pages/MarkdownLessonEditor';
 import Learn from '../components/pages/Learn';
 import LessonView from '../components/pages/LessonView';
+import LessonQuiz from '../components/pages/LessonQuiz';
 import FAQ from '../components/pages/FAQ';
 import Directory from '../components/pages/Directory';
 /* 
@@ -22,6 +23,7 @@ function Router() {
             <Route path="/edit/:lessonId" element={<MarkdownLessonEditor />} />
             <Route path="/learn" element={<Learn />} />
             <Route path="/learn/:id" element={<LessonView />} />
+            <Route path="/learn/:id/quiz" element={<LessonQuiz />} />
             <Route path="/FAQ" element={<FAQ />} />
             <Route path="/directory" element={<Directory />} />
             {/*
