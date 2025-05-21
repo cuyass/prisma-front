@@ -56,7 +56,7 @@ const Register = () => {
                     const errorData = await response.json();
                     errorMsg = errorData.message || errorMsg;
                 } catch {
-                    // Si no es JSON, deja el mensaje por defecto
+                    // Si no és JSON, mantenim el missatge d'error per defecte
                 }
                 setApiMsg(errorMsg);
                 setApiStatus('error');
@@ -86,10 +86,10 @@ const Register = () => {
             <div className="w-full max-w-sm">
                 <div className="flex flex-col items-center mb-8">
                     <Mail size={56} color="var(--color-accent)" className="mb-2" />
-                    <h1 className="text-3xl font-bold mb-2 text-[color:var(--color-base-content)]">
-                        Registra el teu correu
+                    <h1 className="text-4xl mb-2 text-[color:var(--color-base-content)] font-[Righteous] tracking-wider">
+                        Registra't!
                     </h1>
-                    <p className="text-[color:var(--color-base-content)] opacity-70">
+                    <p className="text-[color:var(--color-base-content)] font-[Roboto] text-center opacity-70">
                         Introdueix el teu email per començar a utilitzar l'aplicació.
                     </p>
                 </div>
