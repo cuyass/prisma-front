@@ -8,14 +8,15 @@
 
 ## 🛠 Tecnologies principals
 
-- React (JSX)
-- React Router DOM
-- Tailwind CSS + DaisyUI
-- Vite
-- Axios (per a crides API)
-- Cloudinary (per pujada d’imatges)
-- PostgreSQL (a través del backend)
-- Icones SVG locals
+- React (JSX) v.19.1.0
+- React Router DOM v.7.6.0
+- Tailwind CSS v.4.1.6
+- DaisyUI v.5.0.35
+- Vite v.6.3.5
+- Axios (per a crides API) v.1.9
+- [Markdown Editor for React](https://uiwjs.github.io/react-md-editor/) (per pujada d’imatges) v.4.0.6
+- PostgreSQL (a través del backend) v.42.7.5
+- Icones de Lucide-React v.0.511.0
 
 ---
 
@@ -44,10 +45,14 @@ src/
 - `LessonQuiz.jsx`: Quiz interactiu per lliçó (amb preguntes i respostes).
 - `Register.jsx`: Registre d’usuàries.
 - `Directory.jsx`: Directori de recursos relacionats amb ciberseguretat i diversitat.
-- `FAQ.jsx`: Preguntes freqüents per a situacions crítiques (phishing, malware, etc.).
+- `FAQ.jsx`: Preguntes freqüents per a situacions crítiques (privacitat, assetjament, etc.).
 - `AdminDashboard.jsx`: Gestió de lliçons (CRUD) per administració.
 
 ---
+
+> [!WARNING]  
+> PRISMA és un projecte que està en la primera fase de desenvolupament i li manca la seguretat bàsica.
+> 22/05/2025 -> no hi ha rols, la ruta /admindashboard està desprotegida, els arxius JSON estan desprotegits, manca de login, el registre de correu no està encriptat, el component Markdown Editor no està sanititzat, el codi no té tests unitaris.
 
 ## Configuració i execució
 
@@ -78,7 +83,7 @@ http://localhost:8080/api/v1
 
 Lliçons es renderitzen via MarkdownLesson.jsx
 
-El Quiz es gestiona amb LessonQuiz.jsx, sense entitat pròpia (només preguntes i respostes)
+El Quiz es gestiona, de moment, via Postman
 
 Els components Alert, Drawer, Navbar, Pagination, etc., milloren l’experiència d’usuari
 
