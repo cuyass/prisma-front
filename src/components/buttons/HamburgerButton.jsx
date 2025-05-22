@@ -35,7 +35,7 @@ const HamburgerButton = ({ onClick, tabIndex = 0, ariaLabel = 'Menu' }) => {
     <button
       type="button"
       tabIndex={tabIndex}
-      aria-label={ariaLabel}
+      aria-label={ariaLabel} //meter arrays en data y consumir desde allí
       onClick={onClick}
       style={{
         ...styles.button,

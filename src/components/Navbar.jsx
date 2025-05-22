@@ -7,7 +7,7 @@ const Navbar = () => {
     const location = useLocation();
 
     return (
-        <div className="navbar bg-primary shadow-sm">
+        <div className="navbar bg-primary shadow-sm"> //menos div
             <div className="navbar-start">
                 {location.pathname === "/admindashboard" && (
                     <div className="drawer-content flex flex-col items-center justify-center">

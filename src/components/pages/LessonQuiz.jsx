@@ -15,7 +15,7 @@ const LessonQuiz = () => {
     useEffect(() => {
         axios
             .get(`http://localhost:8080/api/v1/questions/lesson/${id}`)
-            .then((res) => setQuestions(res.data));
+            .then((res) => setQuestions(res.data.data));
     }, [id]);
 
     const handleSelectAnswer = (questionId, answerId) => {

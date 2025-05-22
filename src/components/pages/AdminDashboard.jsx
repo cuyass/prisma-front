@@ -18,7 +18,7 @@ function AdminDashboard() {
 
     useEffect(() => {
 
-        axios.get('http://localhost:8080/api/v1/lessons')
+        axios.get('http://localhost:8080/api/v1/lessons') //usar servicio para hacer llamadas api
             .then(({ data }) => {
                 console.log("Lliçons carregades:", data);
                 setLessons(data.data);
