@@ -1,7 +1,7 @@
 import React from "react";
-import HeroSection from "../sections/HeroSection";
-import IconSection from "../sections/IconSection";
-import FeaturedContent from "../sections/FeaturedSection";
+import HeroSection from "../components/sections/HeroSection";
+import IconSection from "../components/sections/IconSection";
+import FeaturedContent from "../components/sections/FeaturedSection";
 
 function Home() {
   return (

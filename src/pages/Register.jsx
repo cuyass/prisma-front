@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from '../buttons/Button';
+import Button from '../components/buttons/Button';
 import { Mail } from 'lucide-react';
 
 const Register = () => {

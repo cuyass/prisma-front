@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from '../components/pages/Home';
-import AdminDashboard from '../components/pages/AdminDashboard';
-import MarkdownLessonEditor from '../components/pages/MarkdownLessonEditor';
-import Learn from '../components/pages/Learn';
-import LessonView from '../components/pages/LessonView';
-import LessonQuiz from '../components/pages/LessonQuiz';
-import FAQ from '../components/pages/FAQ';
-import Directory from '../components/pages/Directory';
-import Register from '../components/pages/Register';
-import NotFound from '../components/pages/NotFound';
+import Home from '../pages/Home';
+import AdminDashboard from '../pages/AdminDashboard';
+import MarkdownLessonEditor from '../pages/MarkdownLessonEditor';
+import Learn from '../pages/Learn';
+import LessonView from '../pages/LessonView';
+import LessonQuiz from '../pages/LessonQuiz';
+import FAQ from '../pages/FAQ';
+import Directory from '../pages/Directory';
+import Register from '../pages/Register';
+import NotFound from '../pages/NotFound';
 
 
 function Router() {
