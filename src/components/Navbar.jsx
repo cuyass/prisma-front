@@ -5,9 +5,9 @@ import HamburgerButton from "./buttons/HamburgerButton";
 
 const Navbar = () => {
     const location = useLocation();
-
+/*menos div*/
     return (
-        <div className="navbar bg-primary shadow-sm"> //menos div
+        <div className="navbar bg-primary shadow-sm"> 
             <div className="navbar-start">
                 {location.pathname === "/admindashboard" && (
                     <div className="drawer-content flex flex-col items-center justify-center">

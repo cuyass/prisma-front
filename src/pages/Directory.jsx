@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Search, MapPin, Shield, Heart, Globe } from 'lucide-react';
-import Card from '../Card';
-import Button from '../buttons/Button';
-import Pagination from '../Pagination';
+import Card from '../components/Card';
+import Button from '../components/buttons/Button';
+import Pagination from '../components/Pagination';
 
 const Directory = () => {
     const [resources, setResources] = useState([]);

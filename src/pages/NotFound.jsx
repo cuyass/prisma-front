@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AlertTriangle } from 'lucide-react';
-import Button from '../buttons/Button';
+import Button from '../components/buttons/Button';
 
 const NotFound = () => {
 

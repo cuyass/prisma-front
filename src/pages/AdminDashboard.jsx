@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 
-import Alert from "../Alert";
-import Button from "../buttons/Button";
-import LessonTable from "../Table";
-import Drawer from "../Drawer";
+import Alert from "../components/Alert";
+import Button from "../components/buttons/Button";
+import LessonTable from "../components/Table";
+import Drawer from "../components/Drawer";
 
 function AdminDashboard() {
     const [lessons, setLessons] = useState([]);
